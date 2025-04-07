@@ -50,12 +50,13 @@ header("location:dashboard.php");
 	<title>Student Hostel Registration</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">>
+	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-social.css">
 	<link rel="stylesheet" href="css/bootstrap-select.css">
 	<link rel="stylesheet" href="css/fileinput.min.css">
 	<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/modern-style.css">
 <script type="text/javascript" src="js/jquery-1.11.3-jquery.min.js"></script>
 <script type="text/javascript" src="js/validation.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -78,41 +79,43 @@ return true;
 		<?php include('includes/sidebar.php');?>
 		<div class="content-wrapper">
 			<div class="container-fluid">
-
 				<div class="row">
 					<div class="col-md-12">
-					
-						<h2 class="page-title">User Login </h2>
-
-						<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="well row pt-2x pb-3x bk-light">
-							<div class="col-md-8 col-md-offset-2">
-							
-								<form action="" class="mt" method="post">
-									<label for="" class="text-uppercase text-sm">Email / Registration Number</label>
-									<input type="text" placeholder="Email / Registration Number" name="emailreg" class="form-control mb" required="true">
-									<label for="" class="text-uppercase text-sm">Password</label>
-									<input type="password" placeholder="Password" name="password" class="form-control mb" required="true">
+						<h2 class="page-title">User Login</h2>
+						
+						<div class="login-container">
+							<div class="login-form">
+								<form action="" method="post">
+									<div class="form-group">
+										<label for="emailreg">Email / Registration Number</label>
+										<input type="text" id="emailreg" placeholder="Enter your email or registration number" name="emailreg" class="form-control" required="true">
+									</div>
 									
-
-									<input type="submit" name="login" class="btn btn-primary btn-block" value="login" >
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input type="password" id="password" placeholder="Enter your password" name="password" class="form-control" required="true">
+									</div>
+									
+									<button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
 								</form>
+								
+								<div class="forgot-password">
+									<a href="forgot-password.php">Forgot password?</a>
+								</div>
 							</div>
-						</div>
-						<div class="text-center text-light" style="color:black;">
-							<a href="forgot-password.php" style="color:black;">Forgot password?</a>
 						</div>
 					</div>
 				</div>
-						</div>
-							</div>
-						</div>
-					</div>
-				</div> 	
 			</div>
 		</div>
 	</div>
+	
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; <?php echo date('Y'); ?> Hostel Management System. All rights reserved.</p>
+		</div>
+	</footer>
+	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -123,5 +126,4 @@ return true;
 	<script src="js/chartData.js"></script>
 	<script src="js/main.js"></script>
 </body>
-
 </html>
